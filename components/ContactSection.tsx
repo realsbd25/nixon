@@ -62,10 +62,10 @@ export default function ContactSection() {
           >
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">
-                Let's Create Something Amazing
+                Let&apos;s Create Something Amazing
               </h3>
               <p className="text-gray-300 text-lg">
-                Whether you need portraits, event coverage, or commercial photography, I'd love to hear about your project.
+                Whether you need portraits, event coverage, or commercial photography, I&apos;d love to hear about your project.
               </p>
             </div>
 

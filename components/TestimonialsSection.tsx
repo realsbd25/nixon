@@ -5,6 +5,7 @@ import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
+import Image from 'next/image'
 
 const testimonials = [
   {
@@ -17,21 +18,21 @@ const testimonials = [
   {
     name: 'Robert Chen',
     role: 'CEO & Founder, InnovateCorp',
-    content: 'We\'ve worked with numerous photography agencies, but Nixon Production stands apart. Their understanding of corporate branding and ability to capture authentic moments during our annual conference was remarkable. The executive portraits they delivered elevated our entire leadership team\'s presence.',
+    content: "We've worked with numerous photography agencies, but Nixon Production stands apart. Their understanding of corporate branding and ability to capture authentic moments during our annual conference was remarkable. The executive portraits they delivered elevated our entire leadership team's presence.",
     rating: 5,
     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374'
   },
   {
     name: 'Amanda Foster',
     role: 'Vice President of Brand Strategy, Luxe Fashion Group',
-    content: 'Nixon Production brought our fashion campaign to life in ways we never imagined. Their creative direction and technical expertise resulted in advertising content that increased our engagement by 340%. They don\'t just take photos—they tell compelling brand stories.',
+    content: "Nixon Production brought our fashion campaign to life in ways we never imagined. Their creative direction and technical expertise resulted in advertising content that increased our engagement by 340%. They don't just take photos—they tell compelling brand stories.",
     rating: 5,
     image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1374'
   },
   {
     name: 'David Martinez',
     role: 'Chief Operating Officer, Premier Events International',
-    content: 'For our Fortune 500 client events, we trust only Nixon Production. Their professionalism, attention to detail, and ability to capture the energy of large-scale corporate gatherings is unmatched. They\'ve become an integral part of our event success formula.',
+    content: "For our Fortune 500 client events, we trust only Nixon Production. Their professionalism, attention to detail, and ability to capture the energy of large-scale corporate gatherings is unmatched. They've become an integral part of our event success formula.",
     rating: 5,
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1374'
   },
@@ -89,9 +90,11 @@ export default function TestimonialsSection() {
               <CardContent className="p-8 md:p-12">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
-                    <img
+                    <Image
                       src={testimonials[currentIndex].image}
                       alt={testimonials[currentIndex].name}
+                      width={96}
+                      height={96}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -104,7 +107,7 @@ export default function TestimonialsSection() {
                     </div>
                     
                     <p className="text-gray-300 text-lg mb-6 italic">
-                      "{testimonials[currentIndex].content}"
+                      &ldquo;{testimonials[currentIndex].content}&rdquo;
                     </p>
                     
                     <div>

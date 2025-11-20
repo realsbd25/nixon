@@ -37,10 +37,10 @@ export default function AboutSection() {
               About Nixon Production LLC
             </h2>
             <p className="text-gray-300 text-lg mb-4">
-              Nixon Production LLC is a premier photography agency specializing in commercial, corporate, and event photography. With over a decade of experience, we've partnered with leading brands and companies to create compelling visual narratives.
+              Nixon Production LLC is a premier photography agency specializing in commercial, corporate, and event photography. With over a decade of experience, we&apos;ve partnered with leading brands and companies to create compelling visual narratives.
             </p>
             <p className="text-gray-300 text-lg mb-4">
-              Our expertise spans brand photography, corporate headshots, advertising campaigns, promotional content, and comprehensive event coverage. We understand that every image tells a story, and we're committed to making yours unforgettable.
+              Our expertise spans brand photography, corporate headshots, advertising campaigns, promotional content, and comprehensive event coverage. We understand that every image tells a story, and we&apos;re committed to making yours unforgettable.
             </p>
             <p className="text-gray-300 text-lg">
               From Fortune 500 companies to emerging startups, we deliver professional photography that elevates brands and captures the essence of every moment. Our work has been featured in major advertising campaigns, corporate publications, and promotional materials worldwide.
