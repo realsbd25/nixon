@@ -1,11 +1,11 @@
-import HeroSection from '@/components/HeroSection'
+import ServicesSection from '@/components/ServicesSection'
 import ScrollProgress from '@/components/ScrollProgress'
 
-export default function Home() {
+export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-black">
       <ScrollProgress />
-      <HeroSection />
+      <ServicesSection />
     </main>
   )
 }
