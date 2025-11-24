@@ -13,22 +13,22 @@ const portfolioImages = [
   { id: 1, category: 'Brands', src: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470', title: 'Brand Campaign' },
   { id: 2, category: 'Brands', src: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1470', title: 'Fashion Brand' },
   { id: 3, category: 'Brands', src: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1470', title: 'Product Launch' },
-  
+
   // Corporate
   { id: 4, category: 'Corporate', src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1376', title: 'Corporate Portrait' },
   { id: 5, category: 'Corporate', src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374', title: 'Business Team' },
   { id: 6, category: 'Corporate', src: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1470', title: 'Executive Portrait' },
-  
+
   // Events
   { id: 7, category: 'Events', src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1469', title: 'Corporate Event' },
   { id: 8, category: 'Events', src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1470', title: 'Conference' },
   { id: 9, category: 'Events', src: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=1470', title: 'Networking Event' },
-  
+
   // Adverts
   { id: 10, category: 'Adverts', src: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1364', title: 'Commercial Ad' },
   { id: 11, category: 'Adverts', src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374', title: 'Model Portrait' },
   { id: 12, category: 'Adverts', src: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1374', title: 'Beauty Campaign' },
-  
+
   // Promotions
   { id: 13, category: 'Promotions', src: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1470', title: 'Promotional Shoot' },
   { id: 14, category: 'Promotions', src: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070', title: 'Brand Ambassador' },
@@ -46,16 +46,27 @@ export default function PortfolioSection() {
     : portfolioImages.filter(img => img.category === selectedCategory)
 
   return (
-    <section id="portfolio" ref={ref} className="py-20 bg-black">
-      <div className="container mx-auto px-4">
+    <section id="portfolio" ref={ref} className="section-padding bg-black relative overflow-hidden">
+      {/* Background Decoration */}
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold text-white text-center mb-12"
+          className="text-4xl md:text-5xl font-bold text-center mb-4"
         >
-          Portfolio
+          <span className="gradient-text-accent">Portfolio</span>
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-gray-400 text-center mb-12 max-w-2xl mx-auto"
+        >
+          Explore our diverse collection of professional photography work
+        </motion.p>
 
         {/* Category Filters */}
         <motion.div
@@ -65,17 +76,18 @@ export default function PortfolioSection() {
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
-            <button
+            <motion.button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full transition-all ${
-                selectedCategory === category
-                  ? 'bg-white text-black'
-                  : 'bg-zinc-800 text-white hover:bg-zinc-700'
-              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-6 py-2 rounded-full transition-all font-semibold ${selectedCategory === category
+                  ? 'bg-gradient-primary text-white shadow-glow'
+                  : 'glass text-white hover:bg-white/10'
+                }`}
             >
               {category}
-            </button>
+            </motion.button>
           ))}
         </motion.div>
 
@@ -84,23 +96,30 @@ export default function PortfolioSection() {
           {filteredImages.map((image, index) => (
             <motion.div
               key={image.id}
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative h-80 rounded-lg overflow-hidden cursor-pointer group"
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              className="relative h-80 rounded-2xl overflow-hidden cursor-pointer group"
               onClick={() => setLightboxImage(image.src)}
             >
               <Image
                 src={image.src}
                 alt={image.title}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75"
+                className="object-cover transition-all duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                <span className="text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-                  {image.title}
-                </span>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-center p-6">
+                <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <span className="text-white text-xl font-semibold block mb-2">
+                    {image.title}
+                  </span>
+                  <span className="inline-block px-3 py-1 bg-gradient-primary text-white text-xs font-semibold rounded-full">
+                    {image.category}
+                  </span>
+                </div>
               </div>
+              {/* Glow Border on Hover */}
+              <div className="absolute inset-0 border-2 border-transparent group-hover:border-purple-500/50 rounded-2xl transition-all duration-300" />
             </motion.div>
           ))}
         </div>
@@ -112,11 +131,11 @@ export default function PortfolioSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 glass-strong flex items-center justify-center p-4"
           onClick={() => setLightboxImage(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white hover:text-gray-300"
+            className="absolute top-4 right-4 text-white hover:text-gray-300 glass-card p-3 rounded-full hover:scale-110 transition-all"
             onClick={() => setLightboxImage(null)}
           >
             <X className="w-8 h-8" />

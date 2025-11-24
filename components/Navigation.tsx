@@ -32,9 +32,10 @@ export default function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-black/80 backdrop-blur-lg shadow-lg border-b border-white/10'
+          : 'bg-transparent'
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -43,9 +44,9 @@ export default function Navigation() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-2xl font-bold text-white"
+              className="text-2xl font-bold"
             >
-              Nixon Production
+              <span className="gradient-text">Nixon Production</span>
             </motion.div>
           </Link>
 
@@ -57,14 +58,17 @@ export default function Navigation() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
+                className="relative group"
               >
                 <Link
                   href={item.href}
-                  className={`text-white hover:text-gray-300 transition-colors ${
-                    pathname === item.href ? 'border-b-2 border-white' : ''
-                  }`}
+                  className={`text-white hover:text-gray-300 transition-colors relative ${pathname === item.href ? 'font-semibold' : ''
+                    }`}
                 >
                   {item.name}
+                  {/* Animated Underline */}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-primary transition-all duration-300 ${pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`} />
                 </Link>
               </motion.div>
             ))}
@@ -74,10 +78,15 @@ export default function Navigation() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-white"
+            className="md:hidden text-white hover:bg-white/10"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X /> : <Menu />}
+            <motion.div
+              animate={{ rotate: isOpen ? 90 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {isOpen ? <X /> : <Menu />}
+            </motion.div>
           </Button>
         </div>
       </div>
@@ -89,7 +98,7 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 backdrop-blur-md"
+            className="md:hidden glass-strong border-t border-white/10"
           >
             <div className="container mx-auto px-4 py-4 space-y-4">
               {navItems.map((item, index) => (
@@ -102,9 +111,8 @@ export default function Navigation() {
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`block w-full text-left text-white hover:text-gray-300 transition-colors py-2 ${
-                      pathname === item.href ? 'font-bold' : ''
-                    }`}
+                    className={`block w-full text-left text-white hover:text-gray-300 transition-colors py-2 px-4 rounded-lg ${pathname === item.href ? 'bg-gradient-primary font-bold' : 'hover:bg-white/5'
+                      }`}
                   >
                     {item.name}
                   </Link>
