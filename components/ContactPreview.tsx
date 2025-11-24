@@ -67,7 +67,7 @@ export default function ContactPreview() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                        <span className="gradient-text">Let's Work Together</span>
+                        <span className="gradient-text">Let&apos;s Work Together</span>
                     </h2>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto">
                         Ready to elevate your brand with professional photography? Get in touch with us today.
