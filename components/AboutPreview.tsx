@@ -31,7 +31,7 @@ export default function AboutPreview() {
                     className="text-center mb-12"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                        <span className="gradient-text">About Nixon Production</span>
+                        <span className="gradient-text">About 247 Visual Studio</span>
                     </h2>
                     <p className="text-gray-400 text-lg max-w-3xl mx-auto">
                         A premier photography agency specializing in commercial, corporate, and event photography.

@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nixon Production LLC - Professional Photography Agency",
+  title: "247 Visual Studio LLC - Professional Photography Agency",
   description: "Premier photography agency specializing in brand photography, corporate events, advertising campaigns, and promotional content for leading companies worldwide.",
 };
 

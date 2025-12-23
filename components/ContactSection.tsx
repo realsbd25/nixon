@@ -69,7 +69,7 @@ export default function ContactSection() {
               </p>
             </div>
 
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
                   <Mail className="w-6 h-6 text-black" />
@@ -99,7 +99,7 @@ export default function ContactSection() {
                   <p className="text-white">New York, NY</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Contact Form */}

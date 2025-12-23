@@ -26,7 +26,7 @@ export default function AboutSection() {
             <div className="relative h-[500px] rounded-2xl overflow-hidden group">
               <Image
                 src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070"
-                alt="Nixon Production Team"
+                alt="247 Visual Studio Team"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -43,10 +43,10 @@ export default function AboutSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="gradient-text">About Nixon Production LLC</span>
+              <span className="gradient-text">About 247 Visual Studio LLC</span>
             </h2>
             <p className="text-gray-300 text-lg mb-4">
-              Nixon Production LLC is a premier photography agency specializing in commercial, corporate, and event photography. With over a decade of experience, we&apos;ve partnered with leading brands and companies to create compelling visual narratives.
+              247 Visual Studio LLC is a premier photography agency specializing in commercial, corporate, and event photography. With over a decade of experience, we&apos;ve partnered with leading brands and companies to create compelling visual narratives.
             </p>
             <p className="text-gray-300 text-lg mb-4">
               Our expertise spans brand photography, corporate headshots, advertising campaigns, promotional content, and comprehensive event coverage. We understand that every image tells a story, and we&apos;re committed to making yours unforgettable.

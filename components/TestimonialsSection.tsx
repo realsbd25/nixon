@@ -10,35 +10,35 @@ const testimonials = [
   {
     name: 'Jennifer Williams',
     role: 'Chief Marketing Officer, GlobalTech Solutions',
-    content: 'Nixon Production transformed our entire brand visual strategy. Their team captured our product launch event with such precision and artistry that the images became the centerpiece of our international marketing campaign. The ROI on their work has been exceptional.',
+    content: '247 Visual Studio transformed our entire brand visual strategy. Their team captured our product launch event with such precision and artistry that the images became the centerpiece of our international marketing campaign. The ROI on their work has been exceptional.',
     rating: 5,
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1376'
   },
   {
     name: 'Robert Chen',
     role: 'CEO & Founder, InnovateCorp',
-    content: "We've worked with numerous photography agencies, but Nixon Production stands apart. Their understanding of corporate branding and ability to capture authentic moments during our annual conference was remarkable. The executive portraits they delivered elevated our entire leadership team's presence.",
+    content: "We've worked with numerous photography agencies, but 247 Visual Studio stands apart. Their understanding of corporate branding and ability to capture authentic moments during our annual conference was remarkable. The executive portraits they delivered elevated our entire leadership team's presence.",
     rating: 5,
     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374'
   },
   {
     name: 'Amanda Foster',
     role: 'Vice President of Brand Strategy, Luxe Fashion Group',
-    content: "Nixon Production brought our fashion campaign to life in ways we never imagined. Their creative direction and technical expertise resulted in advertising content that increased our engagement by 340%. They don't just take photos—they tell compelling brand stories.",
+    content: "247 Visual Studio brought our fashion campaign to life in ways we never imagined. Their creative direction and technical expertise resulted in advertising content that increased our engagement by 340%. They don't just take photos—they tell compelling brand stories.",
     rating: 5,
     image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1374'
   },
   {
     name: 'David Martinez',
     role: 'Chief Operating Officer, Premier Events International',
-    content: "For our Fortune 500 client events, we trust only Nixon Production. Their professionalism, attention to detail, and ability to capture the energy of large-scale corporate gatherings is unmatched. They've become an integral part of our event success formula.",
+    content: "For our Fortune 500 client events, we trust only 247 Visual Studio. Their professionalism, attention to detail, and ability to capture the energy of large-scale corporate gatherings is unmatched. They've become an integral part of our event success formula.",
     rating: 5,
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1374'
   },
   {
     name: 'Sarah Thompson',
     role: 'Executive Director of Communications, HealthFirst Medical',
-    content: 'Nixon Production handled our sensitive healthcare promotional campaign with incredible professionalism and empathy. The images they created for our patient stories and facility showcases have been instrumental in building trust with our community. Simply outstanding work.',
+    content: '247 Visual Studio handled our sensitive healthcare promotional campaign with incredible professionalism and empathy. The images they created for our patient stories and facility showcases have been instrumental in building trust with our community. Simply outstanding work.',
     rating: 5,
     image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1374'
   }

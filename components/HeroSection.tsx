@@ -101,7 +101,7 @@ export default function HeroSection() {
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
         >
           <span className="gradient-text animate-gradient" style={{ backgroundSize: '200% 200%' }}>
-            Nixon Production LLC
+            247 Visual Studio LLC
           </span>
         </motion.h1>
 

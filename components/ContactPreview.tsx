@@ -14,12 +14,6 @@ const contactInfo = [
         href: 'mailto:hello@nixonproduction.com',
     },
     {
-        icon: Phone,
-        label: 'Phone',
-        value: '+1 (555) 123-4567',
-        href: 'tel:+15551234567',
-    },
-    {
         icon: MapPin,
         label: 'Location',
         value: 'New York, NY',
@@ -74,7 +68,7 @@ export default function ContactPreview() {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto">
                     {contactInfo.map((info, index) => (
                         <motion.a
                             key={info.label}
