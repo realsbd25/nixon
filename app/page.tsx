@@ -3,7 +3,7 @@ import ScrollProgress from '@/components/ScrollProgress'
 import AboutPreview from '@/components/AboutPreview'
 import ServicesPreview from '@/components/ServicesPreview'
 import PortfolioPreview from '@/components/PortfolioPreview'
-import ContactPreview from '@/components/ContactPreview'
+// import ContactPreview from '@/components/ContactPreview'
 
 export default function Home() {
   return (

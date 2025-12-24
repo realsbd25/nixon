@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Mail, MapPin, Send } from 'lucide-react'
 import Link from 'next/link'
 
 const contactInfo = [
